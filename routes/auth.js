@@ -1,8 +1,6 @@
 const router = require("express").Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
-// const Company = require('../models/Company');
-// const Review = require('../models/Review');
 
 router.get('/signup', (req, res, next) => {
 	res.render('signup')
@@ -80,8 +78,6 @@ router.post('/login', (req, res, next) => {
 });
 
 
-router.get('/signup', (req, res, next) => {
-	res.render('signup')
-});
+
 
 module.exports = router;
