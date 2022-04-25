@@ -7,7 +7,7 @@ res.render('company'));
 
 router.get('/add', (req, res, next) => {
 	res.render('add')
-});
+})
 
 
 
