@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const bcrypt = require('bcrypt');
-const User = require('../models/User.model');
+const User = require('../models/User');
 
 router.get('/signup', (req, res, next) => {
 	res.render('signup')
@@ -43,6 +43,9 @@ router.post('/signup', (req, res, next) => {
 					.catch(err => {
 						next(err)
 					})
+                }
+            })
+        });
 
 
 router.get('/login', (req, res, next) => {

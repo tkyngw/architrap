@@ -1,0 +1,32 @@
+
+
+
+
+
+
+<h1>Company</h1>
+
+<img src="#" alt="picture for " height="200px">
+	<h1>Details for {{name}}</h1>
+	<h3>Adress: {{address}}</h3>
+	<p>size {{size}}</p>
+	<p>projects : </p>
+
+
+
+	<p>Reviews: {{Review}}</p>
+
+
+
+
+
+
+
+
+<h1>Reviews</h1>
+
+<form action="/companies/{{company._id}}/reviews" method="POST">
+	
+	<input type="text" name="text">
+	<button type="submit">Add this review 🧸</button>
+</form>
