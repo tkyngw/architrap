@@ -1,22 +1,45 @@
 
-<div class="background">
-    <div class="container">
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/cb4778956c.js" crossorigin="anonymous"></script>
+</head>
+<ul class="nav nav-tabs">
+  <li class="nav-item"> {{#with userFromDB}}
+    <a class="nav-link active" aria-current="page" href="#">{{username}}</a>{{/with}}
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="login">Log in</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="signup">Sign up</a>
+  </li>
+</ul>
 
-    <p>Do you have an user? <a href="login" >Log in!</a></p>
-    <p>New here? <a href="signup" > Sign in</a></p> 
-        {{#with userFromDB}}
-        <p>Welcome, {{username}}</p>
-            {{/with}}
 
 </div>
 <h1>Do you know what you are putting yourself up to? 💀</h1>
 <h2> Join the Architect community. </h2>
 
 
-<form action="/result" method="GET">
-    <label for="company-search">Search the companies: </label>
-    <input type="search" name="q" id="company-search">
-    <button>Search</button>
-</form>
+<div class="box">
+        <form name="search" action="/result" method="GET">
+        <label for="company-search" > </label>
+            <input type="search" id="company-search" class="input" name="txt q">
+        </form>
+        <div class="btn" onclick="document.search.txt.value = ''">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+   
+    <script>
+        $(".btn").click(function() {
+            $(".input").toggleClass("click")
+            $("span").toggleClass("click")
+        })
+    </script>
+
 
 <footer>Made by Kalina, Matias and Takyoung 👩‍💻👨‍💻 </footer>
