@@ -7,6 +7,8 @@ router.get("/", (req, res, next) => {
   res.render("index" , { user: loggedInUser });
 });
 
+
+
 module.exports = router;
 
 

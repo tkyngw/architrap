@@ -10,10 +10,9 @@ body {
 .container {
   display: flex;
   justify-content: flex-end;
-}
-h1{
   
 }
+
 a {
   color: #00b7ff;
 }
