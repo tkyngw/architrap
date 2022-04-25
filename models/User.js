@@ -5,9 +5,11 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      // unique: true -> Ideally, should be unique, but its up to you
+      required: [true, 'Username is required.'],
+      unique : true,
     },
     password: String,
+    required: [true, 'Password is required.']
   },
   {
     // this second object adds extra properties: `createdAt` and `updatedAt`
@@ -18,3 +20,5 @@ const userSchema = new Schema(
 const User = model("User", userSchema);
 
 module.exports = User;
+
+
