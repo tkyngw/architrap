@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require('bcrypt');
 const User = require('../models/User');
 
+
 router.get('/signup', (req, res, next) => {
 	res.render('signup')
 });
@@ -43,9 +44,10 @@ router.post('/signup', (req, res, next) => {
 					.catch(err => {
 						next(err)
 					})
-                }
-            })
-        })
+				}
+			})
+		})
+
 
 
 router.get('/login', (req, res, next) => {
@@ -58,6 +60,7 @@ router.post('/login', (req, res, next) => {
 	// do we have a user with that username in the db
 	User.findOne({ username: username })
 		.then(userFromDB => {
+			console.log(userFromDB)
 			if (userFromDB === null) {
 				// username is not correct -> show login form again
 				res.render('login', { message: 'Invalid Credentials' })
@@ -68,14 +71,15 @@ router.post('/login', (req, res, next) => {
 			if (bcrypt.compareSync(password, userFromDB.password)) {
 				// the password matches -> the user get's logged in
 				// req.session.<some key (usually user)>
-				req.session.user = userFromDB
-				res.redirect('/company')
+				req.body.user = userFromDB
+				res.render('index' ,{userFromDB})
 			} else {
 				// password is not correct
 				res.render('login', { message: 'Invalid Crentials' })
 			}
 		})
 });
+
 
 
 
