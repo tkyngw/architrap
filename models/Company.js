@@ -4,8 +4,8 @@ const Schema = mongoose.Schema;
 const companySchema = new Schema({
     name : String,
     address : String,
-    size : String,
     city : String,
+    size : String,
     projectPhase : [],
     projectType : [],
     review : [{
