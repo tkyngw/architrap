@@ -10,7 +10,28 @@ router.get('/add', (req, res, next) => {
 })
 
 
-
+// create the company in the db
+router.post('/company', (req, res, next) => {
+	
+	const { name, address, city, size, projectPhase, projectType } = req.body
+	console.log( projectPhase, projectType )
+	Company.create({
+		name: name,
+		address: address,
+		city: city,
+		size: size,
+		projectPhase: projectPhase,
+		projectType: projectType,
+	})
+		.then(createdCompany => {
+			console.log(createdCompany)
+			res.redirect(`/company/${createdCompany._id}`)
+			// res.render('book', { book: createdCompany })
+		})
+		.catch(err => {
+			next(err)
+		})
+});
 
 
 
