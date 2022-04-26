@@ -1,6 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/photo-1503387837-b154d5074bd2.avif);
+  background-size: 100vw;
+
+  background-repeat: no-repeat; 
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: flex-end;
+  
 }
 
 a {

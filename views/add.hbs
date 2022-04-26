@@ -1,0 +1,66 @@
+<h1>Add a Company</h1>
+<form action="/company" method="post">
+
+
+
+
+
+<div>
+	<label for="">Name: </label>
+	<input type="text" name="name">
+</div>
+
+<div>
+   <label for="">Address: </label>
+	 <input type="text" name="address">
+   <label for="">City: </label>
+	 <input type="text" name="city">
+</div>
+
+<div>
+  <label for="">Number of employees: </label>
+  <select name="size" id="size" form="size">
+  <option value="small">1-10</option>
+  <option value="medium">10-35</option>
+  <option value="big">35+</option>  
+</select>
+
+</div>
+
+
+<div>
+  <label for="">Project phase: </label>
+  <select name="projectPhase" id="phase" >
+  <option value="1">Phase 1 - First Consultation</option>
+  <option value="2">Phase 2 - Preliminary Design</option>
+  <option value="3">Phase 3 - Construction drawings</option>
+  <option value="4">Phase 4 - Building warrant drawings</option>
+  <option value="5">Phase 5 - Detailed building design</option>
+  <option value="6">Phase 6 - Preparation of the tendering stage</option>
+  <option value="7">Phase 7 - Participation in the tendering stage</option>
+  <option value="8">Phase 8 - Site inspection</option>
+  <option value="9">Phase 9 - Administration and documentation</option>
+  <option value="10">All-in-One - a little bit of this, a little bit of that !</option>
+  </select>
+</div>
+
+
+<div>
+  <label for="">Project types: </label>
+  <select name="projectType" id="types" >
+  <option value="Housing">Housing</option>
+  <option value="Commercial">Commercial</option>
+  <option value="Industrial">Industrial</option>  
+  <option value="Culture">Culture</option>  
+  <option value="Education">Education</option>  
+</select>
+
+</div>
+
+<div>
+<button type="submit">Add this Company</button>
+</div>
+
+</form>
+
+
