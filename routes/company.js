@@ -33,7 +33,13 @@ router.post('/company', (req, res, next) => {
 		})
 });
 
-
+router.get('/company/:id', (req, res, next) => {
+	const id = req.params.id
+	Company.findById(id)
+		.then(comapnyFromDB => {
+			res.render('company', { company : comapnyFromDB})
+		})	
+})
 
 
 
