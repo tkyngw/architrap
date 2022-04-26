@@ -6,8 +6,8 @@ const companySchema = new Schema({
     address : String,
     size : String,
     city : String,
-    projectPhase : Number,
-    projectType : String,
+    projectPhase : [],
+    projectType : [],
     review : [{
         type: Schema.Types.ObjectId,
         ref: 'Review'

@@ -1,6 +1,16 @@
 <h1>Search Results</h1>
-{{#each companies}}
+
+
+{{#with companies}}
     <a href="/company/{{_id}}">
-        <p>{{name}}</p>
+        <h2>{{name}}</h2>
     </a>
-{{/each}}
+{{/with}}
+
+{{#if message}}
+    <h3>{{message}}</h3>
+{{/if}}
+
+<a href="/"><p>Wanna try again?</p></a>
+
+<a href="/add"><p>You can leave the first review here!</p></a>
