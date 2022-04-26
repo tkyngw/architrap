@@ -36,11 +36,22 @@ router.post('/company', (req, res, next) => {
 router.get('/company/:id', (req, res, next) => {
 	const id = req.params.id
 	Company.findById(id)
-		.then(comapnyFromDB => {
-			res.render('company', { company : comapnyFromDB})
+		.then(companyFromDB => {
+			res.render('company', { company : companyFromDB})
 		})	
 })
 
+
+
+router.post('/company/:id/review', (req, res, next) => {
+	const id = req.params.id
+	const { user, text } = req.body
+	Book.findByIdAndUpdate(id, { $push: { review: { user: user, text: text } } })
+		.then(() => {
+			res.redirect(`/company/${id}`)
+		})
+		.catch(err => next(err))
+});
 
 
 module.exports = router;
