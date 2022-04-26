@@ -12,6 +12,10 @@ router.get("/", (req, res, next) => {
   res.render("index" , { user: req.user});
 });
 
+router.get('/about', (req, res, next) => {
+  res.render('about')
+})
+
 router.get('/result', (req, res, next) => {
   const queryString = req.query.q
   console.log(queryString)
