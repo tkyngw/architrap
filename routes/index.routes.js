@@ -1,6 +1,5 @@
 const { compile } = require("hbs");
-const Company = require("../models/Company");
-
+const Company = require("../models/Company")
 const router = require("express").Router();
 //middleware
   
@@ -9,8 +8,8 @@ const router = require("express").Router();
 /* GET home page */
 router.get("/", (req, res, next) => {
   const loggedInUser = req.user
-  console.log(loggedInUser)
-  res.render("index" , { user: loggedInUser });
+  console.log(req.user)
+  res.render("index" , { user: req.user});
 });
 
 router.get('/result', (req, res, next) => {

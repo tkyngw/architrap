@@ -24,20 +24,6 @@ const projectName = "architrap";
 
 app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 
-// 👇 Start handling routes here
-const index = require("./routes/index.routes");
-app.use("/", index);
-
-const auth = require("./routes/auth");
-app.use("/", auth);
-
-const company = require("./routes/company");
-app.use("/", company);
-
-// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
-require("./error-handling")(app);
-
-// session conffiguration 
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 
@@ -86,6 +72,24 @@ passport.use((
 
 app.use(passport.initialize());
 app.use(passport.session());
+
+// 👇 Start handling routes here
+const index = require("./routes/index.routes");
+app.use("/", index);
+
+const auth = require("./routes/auth");
+app.use("/", auth);
+
+const company = require("./routes/company");
+app.use("/", company);
+
+// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
+require("./error-handling")(app);
+
+// session conffiguration 
+
+
+
 
 
 module.exports = app;
