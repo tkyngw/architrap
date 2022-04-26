@@ -5,18 +5,13 @@ const userSchema = new Schema(
   {
     username: {
       type: String,
-      required: [true, 'Username is required.'],
-      unique : true,
+       unique: true
     },
-
-
-    password: {
-      type: String,
-      required: [true, 'Password is required.']
-    },
+    password: String,
+  },
+  {
+    timestamps: true,
   }
-
-
 );
 
 const User = model("User", userSchema);

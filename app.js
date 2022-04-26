@@ -37,4 +37,55 @@ app.use("/", company);
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
+// session conffiguration 
+const session = require('express-session');
+const MongoStore = require('connect-mongo');
+
+app.use(
+	session({
+	  secret: process.env.SESSION_SECRET,
+	  resave: true,
+	  saveUninitialized: false, // <== false if you don't want to save empty session object to the store
+	  cookie: {
+		maxAge: 180000 
+ },
+	  store: MongoStore.create({
+		mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost/myFirstDatabase'
+	  })
+	})
+  );
+// end session 
+// here starts passport config 
+
+const User = require('./models/User')
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+
+passport.serializeUser((user, cb) => cb(null, user._id));
+ 
+passport.deserializeUser((id, cb) => {
+  User.findById(id)
+    .then(user => cb(null, user))
+    .catch(err => cb(err));
+});
+ 
+passport.use((
+	new LocalStrategy((username, password, done) => {
+		// this logic will be executed when we log in
+		User.findOne({ username: username })
+			.then(user => {
+				if (user === null) {
+					// username is not correct
+					done(null, false, { message: 'Wrong Credentials' })
+				} else {
+					done(null, user)
+				}
+			})
+	})
+))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 module.exports = app;
