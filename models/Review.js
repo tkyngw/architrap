@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
     salary : Number,
+    date: Date,
     environment : Number,
     overtime : Number,
     comments : [{
