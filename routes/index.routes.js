@@ -8,7 +8,7 @@ const router = require("express").Router();
 /* GET home page */
 router.get("/", (req, res, next) => {
   const loggedInUser = req.user
-  console.log(req.user)
+  // console.log(req.user)
   res.render("index" , { user: req.user});
 });
 
@@ -41,6 +41,17 @@ router.get('/result', (req, res, next) => {
     next(err)
   })
 })
+
+router.get('/result', (req, res, netx) => {
+  Company.find({ })
+  .then(result =>{
+    res.json(result)
+  })
+  .catch(err => {
+    next(err)
+  })
+})
+
 
 module.exports = router;
 
