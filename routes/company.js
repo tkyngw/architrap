@@ -1,12 +1,13 @@
 const router = require("express").Router();
 const Company = require('../models/Company');
+const Review = require('../models/Review');
 
 router.get('/company', (req, res, next) => 
 res.render('company'));
 
-router.get('/add', (req, res, next) => {
-	res.render('add')
-})
+router.get('/addcompany', (req, res, next) => {
+	res.render('addcompany')
+});
 
 
 // create the company in the db
@@ -40,18 +41,21 @@ router.get('/company/:id', (req, res, next) => {
 			res.render('company', { company : companyFromDB})
 		})	
 })
+//m
 
 
-
-router.post('/company/:id/review', (req, res, next) => {
+router.post('/review/:id', (req, res, next) => {
 	const id = req.params.id
-	const { user, text } = req.body
-	Book.findByIdAndUpdate(id, { $push: { review: { user: user, text: text } } })
-		.then(() => {
-			res.redirect(`/company/${id}`)
-		})
+	const {user, salary, date, enviroment, overtime } = req.body
+	console.log(user, salary, date, enviroment, overtime)
+	Review.create( { user, salary, date, enviroment, overtime} )
+		.then(dbComent => {
+  // when the new coment is created, the company needs to be found and its posts updated with the ID of newly created coment
+  			Company.findByIdAndUpdate(id, { $push: { review: dbComent._id } })
+	   			.then(() => res.redirect(`/company/${id}`))
+		})	
 		.catch(err => next(err))
-});
+		});
 
 
 module.exports = router;
