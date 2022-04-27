@@ -6,11 +6,13 @@
 <h2>ArchiTRAP</h2>
 
 <div class="boxHeader">
-        {{#with user}}
-        <p>Welcome, {{username}}</p>
-        {{/with}}
+        {{#if user}}
+        <p>Welcome, {{user.username}}</p>
+        <a href="/logout">Log Out </a>
+        {{else}}
     <p>Do you have an user? <a href="login" >Log in!</a></p>
     <p>New here? <a href="signup" > Sign in</a></p> 
+    {{/if}}
 </div>
 </header>
 

@@ -5,7 +5,7 @@ const reviewSchema = new Schema({
     username: String,
     name:String,
     yearsWorked:String,
-    environment : String,
+    enviroment : String,
     salary : String,
     overtime : String,
     diversity: String,

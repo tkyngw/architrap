@@ -34,7 +34,7 @@ app.use(
 	  resave: true,
 	  saveUninitialized: false, // <== false if you don't want to save empty session object to the store
 	  cookie: {
-		maxAge: 180000 
+		maxAge: 600000 //10minutes
  },
 	  store: MongoStore.create({
 		mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost/myFirstDatabase'

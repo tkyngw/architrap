@@ -13,36 +13,36 @@
 	<p>size :{{size}}</p>
 	<p>Project Phase :{{projectPhase}} </p>
 	<p>Project Type :{{projectType}} </p>
-
-
-	
-	<p>Reviews: {{review}}</p>
-
 {{/with}}
 
 
 
 
-
+{{#if company.review}}
 <h1>Reviews</h1>
 {{!-- List the reviews --}}
-{{#if company.review}}
+<div class="card2">
 	{{#each company.review}}
-		<div>
-			<p>{{name}}</p>
-			<p>{{yearsWorked}}</p>
-			<p>{{enviroment}}</p>
-			<p>{{salary}}</p>
-			<p>Added by: {{username}}</p>
-		</div>
+			<div class="container2">
+				<p>Name: {{name}}</p>
+				<p>Years worked on the company:{{yearsWorked}}</p>
+				<p>Enviroment: {{enviroment}}</p>
+				<p>Salary:{{salary}}</p>
+				<p>Avarage overtime per month:{{overtime}}</p>
+				<p>Diversity culture:{{diversity}}</p>
+				<p>Have the company benefits?: {{benfits}}</p>
+				<p>Comment: {{comments}}</p>
+				<p>Added by: {{username}}</p>
+			</div>
 	{{/each}}
+	</div>
 {{else}}
 	<h5>No reviews yet</h5>
 {{/if}}
 
 
 {{!-- add a review --}}
-<form action="/review/{{company._id}}" method="POST">
+<form class="formReview" action="/review/{{company._id}}" method="POST">
  <div class="row g-5">
   <div class="col-sm">
     <input type="text" class="form-control" placeholder="Name" name="name">
@@ -69,7 +69,7 @@
   </div>
     <div class="col-sm">
 	  <select class="form-select" aria-label="Default select example" name="salary">
-  		<option selected>Salary Bruto</option>
+  		<option selected>Salary Brutto</option>
   		<option value="1000-1799">1000-1799 €</option>
  	    <option value="1800-2499">1800-2499 €</option>
   		<option value="2500-2999">2500-2999 €</option>
@@ -97,15 +97,17 @@
   		<option value="Excelent">Excelent</option>
 	  </select>
 	</div>
-
+{{#with company}}
 	</div>
 	<div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label"></label>
-  <input  name="benefits"  class="form-control" id="exampleFormControlInput1" placeholder="Have this company benefits for employes? Wich ones?">
+  <input  name="benefits"  class="form-control" id="exampleFormControlInput1" placeholder="Have {{name}} benefits for employes? Wich ones?">
 	</div>
 	<div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">General comment</label>
-  <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What is your opinion abour this company?"></textarea>
+  <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What is your opinion about {{name}}?"></textarea>
 	</div>
-	<button type="submit" class="btn btn-outline-secondary">Add this review</button>
+	<button type="submit" class="btn btn-secondary">Add this review</button>
 </form>
+
+{{/with}}
