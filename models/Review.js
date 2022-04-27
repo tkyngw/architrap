@@ -2,14 +2,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const reviewSchema = new Schema({
-    salary : Number,
-    date: Date,
-    environment : Number,
-    overtime : Number,
-    comments : [{
-        body: String,
-        date: Date
-    }]
+    username: String,
+    name:String,
+    yearsWorked:String,
+    environment : String,
+    salary : String,
+    overtime : String,
+    diversity: String,
+    benefits: String,
+    comments : String,
 });
 
 const Review = mongoose.model('Review', reviewSchema);
