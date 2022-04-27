@@ -1,11 +1,19 @@
-
-<p>your search results</p>
+<div class="title">
+<h4>your search results</h4>
+</div>
+<div class="card-container">
 {{#each companies}}
-    <div>
-        <a href="/company/{{_id}}"><p>{{name}}</p></a>
-        <p>{{city}}</p>
+    <div class="card">
+        <img src="images/box-trap.png" class="card-img-top" alt="logo">
+        <div class="card-body">
+            <a href="/company/{{_id}}" id="company-card">
+                <h6 class="card-title"><strong>{{name}}</strong></h6>
+                <p class="card-text">{{city}}</p>
+            </a>
+        </div>
     </div>
 {{/each}}
+</div>
 
 {{#if message}}
     <h3>{{message}}</h3>
@@ -15,3 +23,9 @@
 <a href="/"><p>Wanna try again?</p></a>
 <a href="/add"><p>or you can leave the first review here!</p></a>
 {{/unless}}
+
+
+  
+  
+ 
+  
