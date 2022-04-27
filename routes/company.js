@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { populate } = require("../models/Company");
 const Company = require('../models/Company');
 const Review = require('../models/Review');
 
@@ -37,7 +38,9 @@ router.post('/company', (req, res, next) => {
 router.get('/company/:id', (req, res, next) => {
 	const id = req.params.id
 	Company.findById(id)
+	.populate('review')
 		.then(companyFromDB => {
+			console.log(companyFromDB)
 			res.render('company', { company : companyFromDB})
 		})	
 })
@@ -48,7 +51,6 @@ router.post('/review/:id', (req, res, next) => {
 	const id = req.params.id
 	const { name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments } = req.body
 	const username = req.user.username
-	console.log( username, name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments )
 	Review.create( { username, name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments } )
 		.then(dbComent => {
   // when the new coment is created, the company needs to be found and its posts updated with the ID of newly created coment
@@ -56,6 +58,11 @@ router.post('/review/:id', (req, res, next) => {
 	   			.then(() => res.redirect(`/company/${id}`))
 		})	
 		.catch(err => next(err))
+		});
+
+router.get('/logout', (req, res, next) => {
+			req.logout();
+			res.redirect('/')
 		});
 
 
