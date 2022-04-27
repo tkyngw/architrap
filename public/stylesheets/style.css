@@ -1,16 +1,38 @@
+* {
+  /* Reset browser's padding and margin */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
 body {
-  padding: 50px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url(../images/photo-1503387837-b154d5074bd2.avif);
-  background-size: 100vw;
+  background-image: url(/images/ptunnel.jpg);
+  background-size: cover;
   color: rgb(255, 255, 255);
   background-repeat: no-repeat; 
   text-align: center;
 }
-.container {
+
+header {
+display: flex;
+justify-content: space-between; 
+width: 1200px;
+text-align: center;
+background-color: black;
+padding: 14px;
+width: 100%;
+}
+
+  
+.boxHeader{
   display: flex;
   justify-content: flex-end;
-  
 }
 
 a {
@@ -21,3 +43,76 @@ h1 {
   color: 15px;
 }
 
+
+footer {
+margin-top: auto;
+justify-content: space-between; 
+text-align: center;
+padding: 7px;
+position: fixed;
+bottom: 0px;
+background-color: rgba(0, 0, 0, 0.438);
+color: white;
+width: 100%;
+}
+
+
+.logsign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(242, 242, 242, 0.356);
+  height: 160px;
+  width: 400px;
+  border: radius 10px;
+}
+
+
+
+.btn btn-warning {
+  font-family: 'Poppins', sans-serif;
+  background-color: purple;
+  color: black;
+  border: none;
+  width: 180px;
+  height: 40px;
+  margin-top: 30px;
+  border-radius:7px;
+}
+
+.formSearch {
+  display: flex;
+  flex-direction: row;
+}
+
+.containerSearch {
+  margin: 200px auto;
+  width: 500px;
+  height: 60px
+}
+
+.formSearch {
+  display: flex;
+  flex-direction: row;
+}
+.search-field {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+}
+
+.search-button {
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-left: -33px;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
