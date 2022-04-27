@@ -46,9 +46,10 @@ router.get('/company/:id', (req, res, next) => {
 
 router.post('/review/:id', (req, res, next) => {
 	const id = req.params.id
-	const {user, salary, date, enviroment, overtime } = req.body
-	console.log(user, salary, date, enviroment, overtime)
-	Review.create( { user, salary, date, enviroment, overtime} )
+	const { name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments } = req.body
+	const username = req.user.username
+	console.log( username, name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments )
+	Review.create( { username, name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments } )
 		.then(dbComent => {
   // when the new coment is created, the company needs to be found and its posts updated with the ID of newly created coment
   			Company.findByIdAndUpdate(id, { $push: { review: dbComent._id } })
