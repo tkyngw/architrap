@@ -1,25 +1,27 @@
 
-<header>
-<a href="about">About</a>
+<header >
+<div class="nav">
+
+    <div class="boxAbout">
+<p>Want to know more ? <a href="about" class="btn btn-outline-light" role="button">About us</a></p>
 <img src="/images/box-trap.png" width="40px" height="40px">
+</div>
 
-<h2>ArchiTRAP</h2>
 
-<div class="boxHeader">
-        {{#if user}}
-        <p>Welcome, {{user.username}}</p>
-        <a href="/logout">Log Out </a>
-        {{else}}
-    <p>Do you have an user? <a href="login" >Log in!</a></p>
-    <p>New here? <a href="signup" > Sign in</a></p> 
-    {{/if}}
+<div class=" boxHeader" >
+    
+        {{#with user}}
+        <p>Welcome, {{username}}</p>
+        {{/with}}
+    <p>Do you already have an account ? <a href="login" class="btn btn-outline-light" role="button">Log in</a></p>
+    <p> ..or new here ? <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a></p> 
 </div>
 </header>
 
 
 
-<h1>Do you know what you are putting yourself up to? 💀</h1>
-<h2> Join the Architect community. </h2>
+<h1>💀 Do you know what you are putting yourself into ? 💀</h1>
+<h2> Join the Architect community </h2>
 
 
 <div class="containerSearch">
@@ -31,11 +33,13 @@
     <img src="/images/searchPNG.png">
     </button>
 </form>
+<p>Or maybe <a href="addcompany" >Add a new company</a> to the list </p>
 </div>
 
 
 
-<p>Or maybe <a href="addcompany" >Add a new company</a> to the list</p>
 
 
-<footer> Made by Kalina, Matias and Takyoung with ❤️ </footer>
+
+
+
