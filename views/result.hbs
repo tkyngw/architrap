@@ -1,11 +1,11 @@
-<h1>Search Results</h1>
 
-
-{{#with companies}}
-    <a href="/company/{{_id}}">
-        <h2>{{name}}</h2>
-    </a>
-{{/with}}
+<p>your search results</p>
+{{#each companies}}
+    <div>
+        <a href="/company/{{_id}}"><p>{{name}}</p></a>
+        <p>{{city}}</p>
+    </div>
+{{/each}}
 
 {{#if message}}
     <h3>{{message}}</h3>
