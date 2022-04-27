@@ -8,8 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url(/images/ptunnel.jpg);
@@ -69,7 +67,6 @@ width: 100%;
 }
 
 
-
 .btn btn-warning {
   font-family: 'Poppins', sans-serif;
   background-color: purple;
@@ -115,4 +112,22 @@ width: 100%;
   width: 20px;
   height: 20px;
   object-fit: cover;
+}
+.formReview{
+  margin: 40px 80px;
+}
+.card2{
+  /* Add shadows to create the "card" effect */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+/* Add some padding inside the card container */
+.container2 {
+  background-color: #2F4F4F ;
+  padding: 2px 16px;
 }
