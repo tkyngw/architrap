@@ -20,12 +20,12 @@ router.get('/result', (req, res, next) => {
   const queryString = req.query.q
   console.log(queryString)
   Company.findOne({name : queryString})
-  .then(comapniesFromDB => {
-    if(comapniesFromDB === null){
+  .then(companiesFromDB => {
+    if(companiesFromDB === null){
       res.render('result', { message : 'Sorry, no results found'})
       return
-    } else if (comapniesFromDB.name === queryString){
-    res.render('result', { companies : comapniesFromDB})
+    } else if (companiesFromDB.name === queryString){
+    res.render('result', { companies : companiesFromDB})
     } 
   })
   .catch(err => {
@@ -34,5 +34,4 @@ router.get('/result', (req, res, next) => {
 })
 
 module.exports = router;
-
 
