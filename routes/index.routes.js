@@ -18,15 +18,24 @@ router.get('/about', (req, res, next) => {
 
 router.get('/result', (req, res, next) => {
   const queryString = req.query.q
-  console.log(queryString)
-  Company.findOne({name : queryString})
-  .then(companiesFromDB => {
+  const companies = []
+  // console.log(queryString)
+  Company.find({ }) // find all the companies from DB
+  .then(companiesFromDB => {  
     if(companiesFromDB === null){
-      res.render('result', { message : 'Sorry, no results found'})
-      return
-    } else if (companiesFromDB.name === queryString){
-    res.render('result', { companies : companiesFromDB})
-    } 
+        res.render('result', { message : 'Sorry, no results found'})
+        return
+      } else {
+      // console.log('companies found from database :' , companiesFromDB)
+      // console.log(companiesFromDB[0].name)
+      for (let company of companiesFromDB){ // iterate over the companies array
+        if(company.name.includes(queryString)) { // if the company's name includes queryString
+          // console.log(company)
+          companies.push(company)
+        }
+      } console.log('this is the result:' , companies)
+      res.render('result', {companies : companies}) // render that companies 
+    }
   })
   .catch(err => {
     next(err)
