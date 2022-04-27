@@ -1,47 +1,69 @@
-* {
-  /* Reset browser's padding and margin */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; 
-}
+
 
 body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url(/images/ptunnel.jpg);
-  background-size: cover;
-  color: rgb(255, 255, 255);
-  background-repeat: no-repeat; 
-  text-align: center;
-}
-
-header {
+margin: 0;
+padding: 0;
 display: flex;
-justify-content: space-between; 
-width: 1200px;
+flex-direction: column;
+align-items: center;
+font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+background-image: url(/images/tunnelpic.jpg);
+background-size: cover;
+color: rgb(255, 255, 255);
+background-repeat: no-repeat; 
 text-align: center;
-background-color: black;
-padding: 14px;
-width: 100%;
 }
 
-  
+/*nav bar*/
+.nav {
+display: flex;
+flex-direction: row;
+justify-content: space-between; 
+font-size: 14px;
+text-align: center;
+height: 8vh;  
+background-color: rgba(0, 0, 0, 0.562);
+width: 100vw;
+color: rgb(255, 255, 255);
+}
+
 .boxHeader{
-  display: flex;
-  justify-content: flex-end;
+display: flex;
+justify-content: flex-end;
+padding: 6px;
 }
 
-a {
-  color: #00b7ff;
+.boxAbout{
+display: flex;
+justify-content: center;
+padding: 6px;
 }
+
+.redirectHP a {
+text-decoration: none;
+color: whitesmoke;
+text-align: center;
+position: absolute; top :8px; left :43%;
+letter-spacing: 2px;
+}
+
+/* end nav bar*/
+
 
 h1 {
-  color: 15px;
+text-align: center;
+font-size: 24px;
+color: rgb(214, 202, 32);
+position: absolute; top :140px;
 }
+
+h2 {
+text-align: center;
+font-size: 22px;
+color: rgb(243, 231, 226);
+position: absolute; top :80px;
+  }
+
 
 
 footer {
@@ -58,14 +80,15 @@ width: 100%;
 
 
 .logsign {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(242, 242, 242, 0.356);
-  height: 160px;
-  width: 400px;
-  border: radius 10px;
+margin-top: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: rgba(242, 242, 242, 0.356);
+height: 360px;
+width: 400px;
+border: radius 12px;
 }
 
 
