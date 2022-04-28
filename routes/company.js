@@ -44,10 +44,21 @@ router.get('/company/:id', (req, res, next) => {
 			res.render('company', { company : companyFromDB})
 		})	
 })
-//m
+
+router.get('/review/:id/', (req, res, next) => {
+	const id = req.params.id
+	Company.findById(id)
+		.then(companyFromDB => {
+			// console.log(companyFromDB)
+			res.render('addreview', {company : companyFromDB})
+		})
+		.catch(err => next(err))
+})
+
 
 
 router.post('/review/:id', (req, res, next) => {
+// router.post('/company/:id/review', (req, res, next) => {	
 	const id = req.params.id
 	const { name, yearsWorked, enviroment, salary, overtime, diversity, benefits, comments } = req.body
 	const username = req.user.username
