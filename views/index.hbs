@@ -1,10 +1,11 @@
 
-<header >
-<div class="nav">
+<header class="nav">
 
-    <div class="boxAbout">
-<p>Want to know more ? <a href="about" class="btn btn-outline-light" role="button">About us</a></p>
+<div class="boxAbout">
+    
 <img src="/images/box-trap.png" width="40px" height="40px">
+<a href="about" class="btn btn-outline-light" role="button">About us</a>
+
 </div>
 
 <div class=" boxHeader" >
@@ -12,12 +13,13 @@
     <p>Welcome, {{user.username}}</p>
     <a href="/logout"  role="button">Log Out </a>
     {{else}}
-    <p>Do you already have an account ? <a href="login" class="btn btn-outline-light" role="button">Log in</a></p>
-    <p> ..or new here ? <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a></p> 
+    <a href="login" class="btn btn-outline-light" role="button">Log in</a>
+    <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a>
     {{/if}}
 </div>
 
 </header>
+
 <h1>💀 Do you know what you are putting yourself into ? 💀</h1>
 <h2> Join the Architect community </h2>
 <div class="containerSearch">

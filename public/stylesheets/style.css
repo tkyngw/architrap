@@ -7,7 +7,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-background-image: url(/images/purplebuilding.jpg);
+background-image: url(/images/tunnelpic.jpg);
 background-size: cover;
 color: rgb(255, 255, 255);
 background-repeat: no-repeat; 
@@ -19,23 +19,27 @@ text-align: center;
 display: flex;
 flex-direction: row;
 justify-content: space-between; 
-font-size: 14px;
-text-align: center;
-height: 8vh;  
-background-color: rgba(0, 0, 0, 0.562);
+padding: 6px;
+font-size: 12px;
+height: 9.5vh;  
+background-color: rgba(0, 0, 0, 0.918);
 width: 100vw;
 color: rgb(255, 255, 255);
 }
 
 .boxHeader{
+height: 7.5vh;  
+width: 20vw;
 display: flex;
-justify-content: flex-end;
+justify-content: space-evenly;
 padding: 6px;
 }
 
 .boxAbout{
+height: 7.5vh;  
+width: 18vw;
 display: flex;
-justify-content: center;
+justify-content: space-evenly;
 padding: 6px;
 }
 
@@ -43,7 +47,7 @@ padding: 6px;
 text-decoration: none;
 color: whitesmoke;
 text-align: center;
-position: absolute; top :8px; left :43%;
+position: absolute; top :10px; left :43%;
 letter-spacing: 2px;
 }
 
@@ -92,7 +96,7 @@ padding: 20px;
 
 
 
-.btn btn-warning {
+.btn-warning {
   font-family: 'Poppins', sans-serif;
   background-color: purple;
   color: black;
@@ -145,22 +149,25 @@ padding: 20px;
 }
 
 .card2{
-  /* Add shadows to create the "card" effect */
   box-shadow: 8px 9px 3px black;
   border-radius: 18px; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: flex-start;
-  margin-bottom: 40px;
-  margin-top: 40px; 
+
 }
 /* Add some padding inside the card container */
 
 .container2 {
-  background-color: #2F4F4F ;
+  background-color: #258585 ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   padding: 2px 16px;
   border-radius: 18px; 
+  width: 250px;
+  height: 400px;
 }
 
 .card {
@@ -172,6 +179,7 @@ padding: 20px;
   height: 48vh;
   width: 20vw;
   border-radius: 10px;
+  box-shadow: 7px 8px 2px black;
 }
 
 .card-body {
@@ -190,7 +198,7 @@ padding: 20px;
 .card-img-top {
   margin: auto;
   height: 65%;
-  width: 85%;
+  width: 70%;
   background-size: cover;
 }
 
@@ -337,3 +345,11 @@ h5 {
   margin-bottom: 7px;
 }
 
+
+.card-company{
+background-color: #f8f4f8;  
+color: #000032;
+background-size: cover;
+height: 330px;
+width: 50%;
+}
