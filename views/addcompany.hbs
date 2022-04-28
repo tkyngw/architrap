@@ -1,62 +1,68 @@
-<h1>Add a Company</h1>
-<form action="/company" method="post">
+<h1>add your employer</h1>
+<section id="background">
+<div id="add-container">
+  <form action="/company" method="post">
 
 
-<div>
-	<label for="">Name: </label>
-	<input type="text" name="name">
-</div>
+  <div>
+    <label for="" class="label-field">Name </label><br>
+    <input type="text" name="name" placeholder="company name">
+  </div>
 
-<div>
-   <label for="">Address: </label>
-	 <input type="text" name="address">
-   <label for="">City: </label>
-	 <input type="text" name="city">
-</div>
+  <div>
+    <label for="" class="label-field">Address </label><br>
+    <input type="text" name="address" placeholder="e.g. Company Street 123"> 
+  </div>
 
-<div>
-  <label for="">Number of employees: </label>
-  <select name="size" id="size">
-  <option value="1-10">1-10</option>
-  <option value="10-35">10-35</option>
-  <option value="35+">35+</option>  
-</select>
-</div>
+  <div>
+    <label for="" class="label-field">City </label><br>
+    <input type="text" name="city" placeholder="e.g. Amsterdam, Berlin, Chicago...">
+  </div>
 
-
-<div>
-  <label for="">Project phase: </label>
-  <select name="projectPhase" id="phase" multiple>
-  <option value="Phase 1 - First Consultation">Phase 1 - First Consultation</option>
-  <option value="Phase 2 - Preliminary Design">Phase 2 - Preliminary Design</option>
-  <option value="Phase 3 - Construction drawings">Phase 3 - Construction drawings</option>
-  <option value="Phase 4 - Building warrant drawings">Phase 4 - Building warrant drawings</option>
-  <option value="Phase 5 - Detailed building design">Phase 5 - Detailed building design</option>
-  <option value="Phase 6 - Preparation of the tendering stage">Phase 6 - Preparation of the tendering stage</option>
-  <option value="Phase 7 - Participation in the tendering stage">Phase 7 - Participation in the tendering stage</option>
-  <option value="Phase 8 - Site inspection">Phase 8 - Site inspection</option>
-  <option value="Phase 9 - Administration and documentation">Phase 9 - Administration and documentation</option>
-  <option value="All-in-One - a little bit of this, a little bit of that !">All-in-One - a little bit of this, a little bit of that !</option>
+  <div>
+    <label for="" class="label-field">Number of employees </label><br>
+    <select name="size" id="size">
+    <option value="1-10">1-10</option>
+    <option value="10-35">10-35</option>
+    <option value="35+">35+</option>  
   </select>
+  </div>
+
+
+  <div>
+    <label for="" class="label-field">Project phase </label><br>
+    <select name="projectPhase" id="phase" multiple size="3">  
+    <option value="Phase 1 - First Consultation">Phase 1 - First Consultation</option>
+    <option value="Phase 2 - Preliminary Design">Phase 2 - Preliminary Design</option>
+    <option value="Phase 3 - Construction drawings">Phase 3 - Construction drawings</option>
+    <option value="Phase 4 - Building warrant drawings">Phase 4 - Building warrant drawings</option>
+    <option value="Phase 5 - Detailed building design">Phase 5 - Detailed building design</option>
+    <option value="Phase 6 - Preparation of the tendering stage">Phase 6 - Preparation of the tendering stage</option>
+    <option value="Phase 7 - Participation in the tendering stage">Phase 7 - Participation in the tendering stage</option>
+    <option value="Phase 8 - Site inspection">Phase 8 - Site inspection</option>
+    <option value="Phase 9 - Administration and documentation">Phase 9 - Administration and documentation</option>
+    <option value="All-in-One - a little bit of this, a little bit of that !">All-in-One - a little bit of this, a little bit of that !</option>
+    </select>
+  </div>
+
+
+  <div>
+    <label for="" class="label-field">Project types </label><br>
+    <select name="projectType" id="types" multiple>
+    <option value="Housing">Housing</option>
+    <option value="Commercial">Commercial</option>
+    <option value="Industrial">Industrial</option>  
+    <option value="Culture">Culture</option>  
+    <option value="Education">Education</option>  
+  </select>
+
+  </div>
+
+  <div>
+  <button type="submit">Add this company</button>
+  </div>
 </div>
-
-
-<div>
-  <label for="">Project types: </label>
-  <select name="projectType" id="types" multiple>
-  <option value="Housing">Housing</option>
-  <option value="Commercial">Commercial</option>
-  <option value="Industrial">Industrial</option>  
-  <option value="Culture">Culture</option>  
-  <option value="Education">Education</option>  
-</select>
-
-</div>
-
-<div>
-<button type="submit">Add this Company</button>
-</div>
-
 </form>
 
 
+</section>
