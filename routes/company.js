@@ -10,6 +10,13 @@ res.render('company'));
 router.get('/addcompany', (req, res, next) => {
 	res.render('addcompany')
 });
+router.get('/success', (req, res, next) => {
+	res.render('success')
+});
+
+router.get('/notsuccess', (req, res, next) => {
+	res.render('not-success')
+});
 
 
 // create the company in the db
@@ -85,12 +92,12 @@ router.get('/review/delete/:id', (req, res, next) => {
 					Review.findByIdAndDelete(id)	
 					.then(() => {
 						//needs to be fixed the line below
-						res.redirect('/')
+						res.redirect(`/success`)
 					})
 				}
 				else{
 					//needs to be fixed the line below
-					res.redirect(`/`, { message: 'you cannot delete a review that is not written by you' })
+					res.redirect(`/notsuccess`)
 				}
 			})
 			.catch(err => next(err))

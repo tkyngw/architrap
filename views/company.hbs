@@ -3,7 +3,7 @@
 <div class="card-company">
 {{#with company}}
 	<div class="container-inside-company">
-	<img class="img-for-build" src="/images/build2.png" alt="picture for" height="150px">
+	<img class="img-for-build" src="/images/build2.png" alt="picture for" height="130px">
 	</div>
 	<div class="container-inside-company">
 	<p class="name company">{{name}}</p>
@@ -22,11 +22,8 @@
 
 {{#if company.review}}
 
-{{#if message}}
-	{{message}}
-{{/if}}
+<h8>Reviews</h8>
 
-<p>Reviews</p>
 {{!-- List the reviews --}}
 <div class="card2">
 	
@@ -56,5 +53,5 @@
 {{/if}}
 
 {{#with company}}
-<a href="/review/{{_id}}" class="btn btn-danger">write a new review</a>
+<a href="/review/{{_id}}" class="btn btn-danger">Write a new review</a>
 {{/with}}

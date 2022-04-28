@@ -1,7 +1,7 @@
 
 {{!-- add a review --}}
 <div class="add-container">
-	<h3 class="second-title" id="new-review">your review on <br>{{company.name}}</h3>
+	<h3 class="second-title shadow" id="new-review">Your review on <br>{{company.name}}</h3>
 	<form  action="/review/{{company._id}}" method="POST">
 
 		
@@ -62,11 +62,11 @@
 	{{#with company}}
 
 		<div>
-	<label for="exampleFormControlInput1" class="label-field">Does {{name}} have benefits for employes?</label>
+	<label for="exampleFormControlInput1" class="label-field shadow">Does {{name}} have benefits for employes?</label>
 	<input  name="benefits"  placeholder="Which ones?">
 		</div>
 		<div >
-	<label for="exampleFormControlTextarea1" class="label-field">Comment</label>
+	<label for="exampleFormControlTextarea1" class="label-field shadow">Comment</label>
 	<textarea name="comments" class="selection"  rows="3" placeholder="What is your opinion about {{name}}?"></textarea>
 		</div>
 		<button type="submit" class=>Add this review</button>
