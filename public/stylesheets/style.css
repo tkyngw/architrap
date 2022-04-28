@@ -91,7 +91,8 @@ padding: 20px;
 }
 
 
-.btn-warning {
+
+.btn btn-warning {
   font-family: 'Poppins', sans-serif;
   background-color: purple;
   color: black;
@@ -160,7 +161,6 @@ padding: 20px;
   background-color: #2F4F4F ;
   padding: 2px 16px;
   border-radius: 18px; 
-
 }
 
 .card {
@@ -216,8 +216,6 @@ padding: 20px;
   margin-top: 40px;
   color: #ead9fa;
 }
-
-
 
 /* the "about" view*/
 .aboutimg {
