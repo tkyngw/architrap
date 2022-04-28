@@ -1,28 +1,32 @@
 
 
 <div class="card-company">
-
 {{#with company}}
-
-<h1>Company</h1>
-
-<img src="/images/companyimg.png" alt="picture for" height="150px">
-	<h1>Details for {{name}}</h1>
-	<h3>Adress: {{address}}</h3>
-	<h3>City: {{city}}</h3>
-	<p>size :{{size}}</p>
-	<p>Project Phase :{{projectPhase}} </p>
-	<p>Project Type :{{projectType}} </p>
+	<div class="container-inside-company">
+	<img class="img-for-build" src="/images/build2.png" alt="picture for" height="150px">
+	</div>
+	<div class="container-inside-company">
+	<p class="name company">{{name}}</p>
+	<span class="name">Adress:</span> <p>{{address}}</p>
+	<span class="name">City:</span><p> {{city}}</p>
+	</div>
+	<div class="container-inside-company theother">
+	<span class="name">Size :</span><p>{{size}}</p>
+	<span class="name">Project Phase :</span><p>{{projectPhase}} </p>
+	<span class="name">Project Type :</span><p>{{projectType}} </p>
+	</div>
+	
 {{/with}}
-
 </div>
 
+
 {{#if company.review}}
-<h1>Reviews</h1>
+<p>Reviews</p>
 {{!-- List the reviews --}}
 <div class="card2">
 	
 	{{#each company.review}}
+
 	<div class="container2">
 
 	<p><b>Name: </b>{{name}}</p>
@@ -38,6 +42,7 @@
 	<a href="/review/delete/{{_id}}"><img src="/images/trash.png" width="20px" height="20px"></a>
 	</div>
 </div>
+
 	{{/each}}
 	
 	</div>
