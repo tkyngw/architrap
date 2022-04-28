@@ -1,7 +1,6 @@
 
 
 body {
-
 margin: 0;
 padding: 0;
 display: flex;
@@ -66,7 +65,6 @@ position: absolute; top :80px;
 }
 
 
-
 footer {
 margin-top: auto;
 justify-content: space-between; 
@@ -78,7 +76,6 @@ background-color: rgba(0, 0, 0, 0.438);
 color: white;
 width: 100%;
 }
-
 
 .logsign {
 margin-top: 80px;
@@ -120,6 +117,7 @@ padding: 20px;
   display: flex;
   flex-direction: row;
 }
+
 .search-field {
   width: 100%;
   padding: 10px 35px 10px 15px;
@@ -144,6 +142,7 @@ padding: 20px;
 .formReview{
   margin: 40px 80px;
 }
+
 .card2{
   /* Add shadows to create the "card" effect */
   box-shadow: 8px 9px 3px black;
@@ -153,15 +152,15 @@ padding: 20px;
   justify-content: space-around;
   align-items: flex-start;
   margin-bottom: 40px;
-  margin-top: 40px;
-  
+  margin-top: 40px; 
 }
 /* Add some padding inside the card container */
+
 .container2 {
   background-color: #2F4F4F ;
   padding: 2px 16px;
   border-radius: 18px; 
-  padding: 10px;
+
 }
 
 .card {
@@ -169,7 +168,7 @@ padding: 20px;
   flex-direction: column;
   margin: 20px;
   padding: 10px;
-  background-color: #000032;
+  background-color: #08042c;
   height: 48vh;
   width: 20vw;
   border-radius: 10px;
@@ -217,6 +216,7 @@ padding: 20px;
   margin-top: 40px;
   color: #ead9fa;
 }
+
 
 
 /* the "about" view*/
@@ -270,3 +270,72 @@ h5 {
   }
 
   /* End of the "about" view*/
+
+#add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 100px;
+  width: 50vw;
+  height: 90vh;
+  border-radius: 15px;
+  text-align: left;
+  color: #ead9fa;
+  font-size: 1.2em;
+}
+
+#add-container input, #size{
+  border: none;
+  border-bottom: 1px solid #ead9fa;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  background-color: #000032;
+  height: 40px;
+  width: 95%;
+  margin-left: 0;
+  font-size: 0.8em;
+  color: #ead9fa;
+  padding-left: 10px;
+}
+
+#phase, #types{
+  border: none;
+  border-bottom: 1px solid #ead9fa;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  background-color: #000032;
+  height: 50px;
+  width: 95%;
+  margin-left: 0;
+  font-size: 0.8em;
+  color: #ead9fa;
+  padding-left: 10px;
+}
+
+::placeholder{
+  color: #ead9fa;
+}
+
+#add-container button {
+  border: 1px solid #000032;
+  border-radius: 2px;
+  height: 40px;
+  width: 95%;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #ead9fa;
+  background-color: #aa4fe8;
+}
+
+#phase {
+  height: 60px;
+}
+
+.label-field{
+  font-size: 0.7em;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
