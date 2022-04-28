@@ -339,3 +339,12 @@ h5 {
   margin-bottom: 7px;
 }
 
+.log-out-button{
+  height: 37px;
+ margin-left: 10px;
+}
+
+.welcome-text{
+  text-align: center;
+  margin-top: 10px;
+}

@@ -3,14 +3,14 @@
 <div class="nav">
 
     <div class="boxAbout">
-<p>Want to know more ? <a href="about" class="btn btn-outline-light" role="button">About us</a></p>
+<p> <a href="about" class="btn btn-outline-light" role="button">About us</a></p>
 <img src="/images/box-trap.png" width="40px" height="40px">
 </div>
 
 <div class=" boxHeader" >
     {{#if user}}
-    <p>Welcome, {{user.username}}</p>
-    <a href="/logout"  role="button">Log Out </a>
+    <p class="welcome-text">Welcome, {{user.username}}.</p>
+    <a href="/logout" class="btn btn-outline-light log-out-button" role="button">Log Out </a>
     {{else}}
     <p>Do you already have an account ? <a href="login" class="btn btn-outline-light" role="button">Log in</a></p>
     <p> ..or new here ? <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a></p> 
@@ -21,7 +21,7 @@
 <h1>💀 Do you know what you are putting yourself into ? 💀</h1>
 <h2> Join the Architect community </h2>
 <div class="containerSearch">
-    
+
 <form autocomplete="off" action="/result" method="GET" class="formSearch">
     <label for="company-search"> </label>
     <input class="search-field" type="search" name="q" id="company-search" placeholder="Search a company...">
