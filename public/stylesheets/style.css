@@ -65,7 +65,6 @@ position: absolute; top :80px;
 }
 
 
-
 footer {
 margin-top: auto;
 justify-content: space-between; 
@@ -77,7 +76,6 @@ background-color: rgba(0, 0, 0, 0.438);
 color: white;
 width: 100%;
 }
-
 
 .logsign {
 margin-top: 80px;
@@ -93,7 +91,7 @@ padding: 20px;
 }
 
 
-.btn-warning {
+.btn btn-warning {
   font-family: 'Poppins', sans-serif;
   background-color: purple;
   color: black;
@@ -119,6 +117,7 @@ padding: 20px;
   display: flex;
   flex-direction: row;
 }
+
 .search-field {
   width: 100%;
   padding: 10px 35px 10px 15px;
@@ -143,8 +142,10 @@ padding: 20px;
 .formReview{
   margin: 40px 80px;
 }
+
 .card2{
   /* Add shadows to create the "card" effect */
+
   box-shadow: 8px 9px 3px black;
   border-radius: 18px; 
   display: flex;
@@ -156,6 +157,7 @@ padding: 20px;
   
 }
 /* Add some padding inside the card container */
+
 .container2 {
   background-color: #2F4F4F ;
   padding: 2px 16px;
@@ -167,7 +169,7 @@ padding: 20px;
   flex-direction: column;
   margin: 20px;
   padding: 10px;
-  background-color: #000032;
+  background-color: #08042c;
   height: 48vh;
   width: 20vw;
   border-radius: 10px;
