@@ -7,24 +7,21 @@
 <img src="/images/box-trap.png" width="40px" height="40px">
 </div>
 
-
 <div class=" boxHeader" >
-    
-        {{#with user}}
-        <p>Welcome, {{username}}</p>
-        {{/with}}
+    {{#if user}}
+    <p>Welcome, {{user.username}}</p>
+    <a href="/logout"  role="button">Log Out </a>
+    {{else}}
     <p>Do you already have an account ? <a href="login" class="btn btn-outline-light" role="button">Log in</a></p>
     <p> ..or new here ? <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a></p> 
+    {{/if}}
 </div>
+
 </header>
-
-
-
 <h1>💀 Do you know what you are putting yourself into ? 💀</h1>
 <h2> Join the Architect community </h2>
-
-
 <div class="containerSearch">
+    
 <form autocomplete="off" action="/result" method="GET" class="formSearch">
     <label for="company-search"> </label>
     <input class="search-field" type="search" name="q" id="company-search" placeholder="Search a company...">
@@ -33,6 +30,7 @@
     <img src="/images/searchPNG.png">
     </button>
 </form>
+
 <p>Or maybe <a href="addcompany" >Add a new company</a> to the list </p>
 </div>
 
