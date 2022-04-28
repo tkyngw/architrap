@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { populate } = require("../models/Company");
 const Company = require('../models/Company');
 const Review = require('../models/Review');
+const User = require("../models/User");
 
 router.get('/company', (req, res, next) => 
 res.render('company'));
@@ -13,8 +14,6 @@ router.get('/addcompany', (req, res, next) => {
 
 // create the company in the db
 router.post('/company', (req, res, next) => {
-	
-	
 	const { name, address, city, size, projectPhase, projectType } = req.body
 	console.log( projectPhase, projectType )
 	Company.create({
@@ -26,7 +25,6 @@ router.post('/company', (req, res, next) => {
 		projectType: projectType,
 	})
 		.then(createdCompany => {
-			console.log(createdCompany)
 			res.redirect(`/company/${createdCompany._id}`)
 			// res.render('book', { book: createdCompany })
 		})
@@ -45,6 +43,7 @@ router.get('/company/:id', (req, res, next) => {
 		})	
 })
 
+
 router.get('/review/:id/', (req, res, next) => {
 	const id = req.params.id
 	Company.findById(id)
@@ -54,6 +53,7 @@ router.get('/review/:id/', (req, res, next) => {
 		})
 		.catch(err => next(err))
 })
+
 
 
 
@@ -72,12 +72,33 @@ router.post('/review/:id', (req, res, next) => {
 		.catch(err => next(err))
 		});
 
-router.get('/logout', (req, res, next) => {
-			req.logout();
-			res.redirect('/')
-		});
+
+router.get('/review/delete/:id', (req, res, next) => {
+	const id = req.params.id
+	console.log(req.params.id)
+	const userid  = req.session.passport.user
+	Review.findById(id)
+		.then(idReviewDb => {
+			User.findById(userid)
+			.then(idUserDb =>{
+				if(idUserDb.username === idReviewDb.username){
+					Review.findByIdAndDelete(id)	
+					.then(() => {
+						Company.findOne
+						//needs to be fixed the line below
+						res.redirect(`/`)
+					})
+				}
+				else{
+					//needs to be fixed the line below
+					res.redirect(`/`, { message: 'you cannot delete a review that its not writted by you' })
+				}
+			})
+			.catch(err => next(err))
+		})
+		.catch(err => next(err))
+});
 
 
 module.exports = router;
-
 
