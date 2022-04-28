@@ -17,7 +17,6 @@
 
 </div>
 
-
 {{#if company.review}}
 <h1>Reviews</h1>
 {{!-- List the reviews --}}
@@ -25,6 +24,7 @@
 	
 	{{#each company.review}}
 		<div class="container2">
+
 
 	<p>Name: {{name}}</p>
 	<p>Worked years there :{{yearsWorked}}</p> 
@@ -37,6 +37,19 @@
 	<p>Added by: {{username}}</p> 
 	
 	</div>
+
+			<p>Name: {{name}}</p>
+			<p>Years worked on the company:{{yearsWorked}}</p>
+			<p>Enviroment: {{enviroment}}</p>
+			<p>Salary:{{salary}}</p>
+			<p>Avarage overtime per month:{{overtime}}</p>
+			<p>Diversity culture:{{diversity}}</p>
+			<p>Have the company benefits?: {{benfits}}</p>
+			<p>Comment: {{comments}}</p>
+			<p>Added by: {{username}}</p>
+			<a href="/review/delete/{{_id}}">Delete this review</a>
+		</div>
+
 	{{/each}}
 	
 	</div>

@@ -149,7 +149,7 @@ padding: 20px;
   object-fit: cover;
 }
 
-#add-company {
+.links {
 color: white;
 }
 
@@ -335,7 +335,6 @@ h5 {
   margin-bottom: 7px;
 }
 
-
 .card-company{
 background-color: #070707;  
 color: #9452b9;
@@ -374,4 +373,18 @@ justify-content: space-around;
   height: 270px;
 }
 
+.log-out-button{
+  height: 37px;
+ margin-left: 10px;
+}
+
+.welcome-text{
+  text-align: center;
+  margin-top: 10px;
+
+#review-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
 

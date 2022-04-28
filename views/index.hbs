@@ -2,13 +2,15 @@
 <header >
 <div class="nav">
     <div class="boxAbout">
+
 <h7> Join the architecture community </h7>
+
 </div>
 
 <div class=" boxHeader" >
     {{#if user}}
-    <p>Welcome, {{user.username}}</p>
-    <a href="/logout"  role="button">Log Out </a>
+    <p class="welcome-text">Welcome, {{user.username}}.</p>
+    <a href="/logout" class="btn btn-outline-light log-out-button" role="button">Log Out </a>
     {{else}}
     <a href="about" class="btn btn-outline-light" role="button">About us</a>
     <a href="login" class="btn btn-outline-light" role="button">Log in</a>
@@ -21,6 +23,7 @@
 
 <h1 id="main-title">Workplace insights for your self-empowerment</h1>
 <div class="containerSearch">
+
   
     <form autocomplete="off" action="/result" method="GET" class="formSearch">
     <label for="company-search"> </label>
@@ -31,7 +34,7 @@
     </button>
     </form>
     <br>
-    <p>or you can start by <a href="addcompany" id="add-company">adding your Workplace</a> to the list </p>
+    <p>or you can start by <a href="addcompany" class="links">adding your Workplace</a> to the list </p>
 </div>
 
 
