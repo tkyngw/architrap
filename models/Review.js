@@ -11,6 +11,10 @@ const reviewSchema = new Schema({
     diversity: String,
     benefits: String,
     comments : String,
+    owner: {
+		type: Schema.Types.ObjectId,
+		ref: 'User'
+	}
 });
 
 const Review = mongoose.model('Review', reviewSchema);
