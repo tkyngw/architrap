@@ -251,7 +251,7 @@ font-family: 'Poppins', sans-serif;
 background-color: goldenrod;
 color: black;
 width: 180px;
-height: 40px;
+height: 30px;
 margin-bottom: 20px;
 }
 
@@ -360,17 +360,15 @@ justify-content: space-around;
 
 .container2 {
 
-  background-color: #258585 ;
-  font-size: 12px;
-  box-shadow: 8px 9px 3px black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1px 2px;
-  border-radius: 18px; 
+  background-color: #e1ebeb ;
+  font-size: 13.5px;
+  box-shadow: 6px 7px 2px black;
+  color: black;
+  padding: 2px 8px;
   width: 280px;
-  height: 270px;
+  height: 280px;
+  text-align: left;
+  line-height: 0.9em;
 }
 
 .log-out-button{
@@ -381,10 +379,20 @@ justify-content: space-around;
 .welcome-text{
   text-align: center;
   margin-top: 10px;
+}
 
-#review-container {
+.review-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   margin-top: 20px;
 }
 
+
+.trash a {
+  background-color: red;
+  color: white;
+  padding: 0.5em 0.5em;
+  position: relative; bottom :25px; left: 239px;
+ 
+}
