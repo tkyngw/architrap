@@ -17,7 +17,7 @@ router.post('/signup', (req, res, next) => {
 		return
 	}
 	// is the username not empty
-	if (username.length === 0) {
+	if (username.length === 0) {srdhy
 		res.render('signup', { message: 'Your username cannot be empty' })
 		return
 	}
@@ -65,7 +65,10 @@ router.post(
 	})
   );
 
-
+  router.get('/logout', (req, res, next) => {
+	req.logout();
+	res.redirect('/')
+});
 
 
 module.exports = router;
