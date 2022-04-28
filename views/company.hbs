@@ -37,77 +37,9 @@
 	{{/each}}
 	</div>
 {{else}}
-	<h5>No reviews yet, why not adding one below?</h5>
+	<h5>No reviews yet, why not adding one?</h5>
 {{/if}}
 
-
-{{!-- add a review --}}
-<form class="formReview" action="/review/{{company._id}}" method="POST">
- <div class="row g-5">
-  <div class="col-sm">
-    <input type="text" class="form-control" placeholder="Name" name="name">
-  </div>
-  <div class="col-sm">
-    <select class="form-select" aria-label="Default select example" name="yearsWorked">
-  		<option selected>Time Worked here</option>
-  		<option value="less than 1 year">Less than 1 year</option>
- 	    <option value="1 year">1 year</option>
-  		<option value="2-3 years">2-3 years</option>
-		<option value="3-5 years">3-5 years</option>
-  		<option value="+5"> +5</option>
-	</select>
-  </div>
-  <div class="col-sm">
-	  <select class="form-select" aria-label="Default select example" name="enviroment">
-  		<option selected>Enviroment</option>
-  		<option value="Very poor">Very poor</option>
- 	    <option value="Poor">Poor</option>
-  		<option value="Not bad">Not bad</option>
-		<option value="Good">Good</option>
-  		<option value="Excelent">Excelent</option>
-	  </select>
-  </div>
-    <div class="col-sm">
-	  <select class="form-select" aria-label="Default select example" name="salary">
-  		<option selected>Salary Brutto</option>
-  		<option value="1000-1799">1000-1799 €</option>
- 	    <option value="1800-2499">1800-2499 €</option>
-  		<option value="2500-2999">2500-2999 €</option>
-		<option value="3000-3999">3000-3999 €</option>
-  		<option value="+4000">+4000 €</option>
-	  </select>
-  </div>
-  <div class="col-sm">
-	  <select class="form-select" aria-label="Default select example" name="overtime">
-  		<option selected>Overtime per month</option>
-		<option value="0">0 Hrs</option>
-  		<option value="1-5">1-5</option>
- 	    <option value="6-10">6-10</option>
-  		<option value="10-20">10-20</option>
-		<option value="+20">+20</option>
-	  </select>
-	</div>
-	  <div class="col-sm">
-	  <select class="form-select" aria-label="Default select example" name="diversity">
-  		<option selected>Diversity and inclusion</option>
-  		<option value="Very poor">Very poor</option>
- 	    <option value="Poor">Poor</option>
-  		<option value="Not bad">Not bad</option>
-		<option value="Good">Good</option>
-  		<option value="Excelent">Excelent</option>
-	  </select>
-	</div>
 {{#with company}}
-	</div>
-	<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label"></label>
-  <input  name="benefits"  class="form-control" id="exampleFormControlInput1" placeholder="Have {{name}} benefits for employes? Wich ones?">
-	</div>
-	<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">General comment</label>
-  <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="What is your opinion about {{name}}?"></textarea>
-	</div>
-	<button type="submit" class="btn btn-secondary">Add this review</button>
-</form>
-
+<a href="/review/{{_id}}">write a review</a>
 {{/with}}
