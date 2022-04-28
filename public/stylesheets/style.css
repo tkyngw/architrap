@@ -70,9 +70,10 @@ text-align: center;
 padding: 7px;
 position: fixed;
 bottom: 0px;
-background-color: rgba(0, 0, 0, 0.438);
+background-color: rgba(0, 0, 0, 0.4);
 color: white;
 width: 100%;
+font-size: .8em;
 }
 
 .logsign {
@@ -110,8 +111,14 @@ padding: 20px;
 
 #main-title{
   font-size: 2em;
-  margin-top: 85px;
+  margin-top: 80px;
   text-align: center;
+}
+
+.second-title{
+  text-align: center;
+  margin-top: 25px;
+  color: white;
 }
 
 .containerSearch {
@@ -187,6 +194,27 @@ color: white;
   border-radius: 10px;
 }
 
+
+
+.card-not-found{
+  display: flex;
+  flex-direction: column;
+  background-color: #aa4fe8;
+  height: 78vh;
+  width: 40vw;
+  border-radius: 10px;
+  padding: 4%;
+  padding-top: 3%;
+  padding-bottom: 6%;
+}
+
+.card-img{
+  margin: auto;
+  height: 40%;
+  width: 46%;
+  background-size: cover;
+}
+
 .card-body {
   margin: auto;
   width: 100%;
@@ -209,6 +237,15 @@ color: white;
 
 .card-title{
   font-size: 1.3em;
+}
+
+.card-title:hover{
+  color: #fcba03;
+}
+
+
+.card-text{
+  color: #6f1ebf;
 }
 
 .card-container {
@@ -283,22 +320,21 @@ h5 {
   /* End of the "about" view*/
 
 
-#add-container {
+.add-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 100px;
   margin-bottom: 100px;
-  padding: 100px;
-  width: 50vw;
-  height: 90vh;
+  width: 40vw;
+
   border-radius: 15px;
   text-align: left;
   color: #ead9fa;
   font-size: 1.2em;
 }
 
-#add-container input, #size{
+.add-container input, #size{
   border: none;
   border-bottom: 1px solid #ead9fa;
   border-radius: 2px;
@@ -312,7 +348,7 @@ h5 {
   padding-left: 10px;
 }
 
-#phase, #types{
+#phase, #types, .selection{
   border: none;
   border-bottom: 1px solid #ead9fa;
   border-radius: 2px;
@@ -330,16 +366,24 @@ h5 {
   color: #ead9fa;
 }
 
-#add-container button {
-  border: 1px solid #000032;
-  border-radius: 2px;
-  height: 40px;
+.add-container button {
+  border: none;
+  border-radius: 5px;
+  height: 45px;
   width: 95%;
   margin-top: 20px;
   font-size: 1em;
   color: #ead9fa;
   background-color: #aa4fe8;
+  padding: auto
 }
+
+.add-container button:hover{
+ background-color: #fcba03;
+ color:#000032;
+ border-radius: 15px;
+}
+
 
 #phase {
   height: 60px;
@@ -357,3 +401,46 @@ h5 {
   margin-top: 20px;
 
 }
+
+#new-review {
+  margin-bottom: 40px;
+}
+
+.review{
+  margin-bottom: 30px;
+}
+
+#no-result{
+  font-size: 2.4em;
+  font-weight: bold;
+  
+}
+
+.button-link {
+  background-color: #fcba03;
+  padding: .7em;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  box-shadow: white 3px 3px;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+  border-radius: 2px;
+}
+
+.button-link:hover{
+  background-color: #08042c;
+  color: #fcba03
+}
+
+.plain{
+  margin-bottom: 40px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+/*
+yellow: #fcba03
+dark navy: #08042c
+*/

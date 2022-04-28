@@ -1,5 +1,5 @@
 <div class="title">
-<h4>your search results</h4>
+<h3 class="second-title">your search results</h3>
 </div>
 <div class="card-container">
 {{#each companies}}
@@ -20,8 +20,13 @@
 {{/if}}
 
 {{#unless companies}}
-<a href="/" class="links"><p>Wanna try again?</p></a>
-<a href="/add" class="links"><p>or you can leave the first review here!</p></a>
+    <div class="card-not-found">
+        <h3 id="no-result">Oops, no results found!</h3>
+        <p class="plain">Wanna try again?</p>
+        <h6><a href="/" class="button-link" ><strong>Yes</strong></a></h6>
+        <img src="images/box-trap.png" class="card-img" alt="logo" >
+        <h6><a href="/addcompany" class="button-link"><strong>No, I'd rather start a review by myself</strong></a></h6>
+    </div>
 {{/unless}}
 
 
