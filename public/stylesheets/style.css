@@ -6,8 +6,8 @@ padding: 0;
 display: flex;
 flex-direction: column;
 align-items: center;
-font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-background-image: url(/images/tunnelpic.jpg);
+font-family: 'Work Sans', sans-serif;
+background-image: url(/images/purplebuilding.jpg);
 background-size: cover;
 color: rgb(255, 255, 255);
 background-repeat: no-repeat; 
@@ -19,10 +19,11 @@ text-align: center;
 display: flex;
 flex-direction: row;
 justify-content: space-between; 
-padding: 6px;
-font-size: 12px;
-height: 9.5vh;  
-background-color: rgba(0, 0, 0, 0.918);
+align-items: center;
+font-size: 14px;
+text-align: center;
+height: 10vh;  
+background-color: rgba(0, 0, 0, 0.8);
 width: 100vw;
 color: rgb(255, 255, 255);
 }
@@ -36,19 +37,16 @@ padding: 6px;
 }
 
 .boxAbout{
-height: 7.5vh;  
-width: 18vw;
-display: flex;
-justify-content: space-evenly;
-padding: 6px;
+margin-left: 20px;
 }
 
 .redirectHP a {
+font-size: 24px;
 text-decoration: none;
 color: whitesmoke;
 text-align: center;
-position: absolute; top :10px; left :43%;
-letter-spacing: 2px;
+position: absolute; top :10px; left :41%;
+letter-spacing: 1px;
 }
 
 /* end nav bar*/
@@ -67,7 +65,6 @@ font-size: 22px;
 color: rgb(243, 231, 226);
 position: absolute; top :80px;
 }
-
 
 footer {
 margin-top: auto;
@@ -95,9 +92,8 @@ padding: 20px;
 }
 
 
-
 .btn-warning {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   background-color: purple;
   color: black;
   border: none;
@@ -110,6 +106,15 @@ padding: 20px;
 .formSearch {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+#main-title{
+  font-size: 2em;
+  margin-top: 85px;
+  text-align: center;
 }
 
 .containerSearch {
@@ -144,31 +149,15 @@ padding: 20px;
   object-fit: cover;
 }
 
+#add-company {
+color: white;
+}
+
+
 .formReview{
   margin: 40px 80px;
 }
 
-.card2{
-  box-shadow: 8px 9px 3px black;
-  border-radius: 18px; 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
-
-}
-/* Add some padding inside the card container */
-
-.container2 {
-  background-color: #258585 ;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2px 16px;
-  border-radius: 18px; 
-  width: 250px;
-  height: 400px;
-}
 
 .card {
   display: flex;
@@ -246,10 +235,11 @@ align-items: center;
 justify-content: space-around;
 background-color: rgba(241, 234, 238, 0.664);
 height: 500px;
-width: 530px;
+width: 550px;
 padding: 20px;
 text-align: justify;
 box-shadow: 8px 4px 4px black;
+font-size: 14px;
 }
 
 .btn-danger {
@@ -266,12 +256,12 @@ margin-bottom: 20px;
 }
 
 h4 {
-font-size: 2em;
+font-size: 1.5em;
 font-weight:bold;
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight:bold;
   }
 
@@ -347,9 +337,41 @@ h5 {
 
 
 .card-company{
-background-color: #f8f4f8;  
-color: #000032;
+background-color: #070707;  
+color: #9452b9;
 background-size: cover;
-height: 330px;
-width: 50%;
+height: 250px;
+width: 100%;
+display: flex;
+align-items: flex-end;
+justify-content: space-around;
 }
+
+.card2{
+ padding: 15px;
+  border-radius: 18px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+
+}
+
+
+.container2 {
+
+  background-color: #258585 ;
+  font-size: 12px;
+  box-shadow: 8px 9px 3px black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1px 2px;
+  border-radius: 18px; 
+  width: 280px;
+  height: 270px;
+}
+
+

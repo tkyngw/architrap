@@ -1,11 +1,8 @@
 
-<header class="nav">
-
-<div class="boxAbout">
-    
-<img src="/images/box-trap.png" width="40px" height="40px">
-<a href="about" class="btn btn-outline-light" role="button">About us</a>
-
+<header >
+<div class="nav">
+    <div class="boxAbout">
+<h7> Join the architecture community </h7>
 </div>
 
 <div class=" boxHeader" >
@@ -13,6 +10,7 @@
     <p>Welcome, {{user.username}}</p>
     <a href="/logout"  role="button">Log Out </a>
     {{else}}
+    <a href="about" class="btn btn-outline-light" role="button">About us</a>
     <a href="login" class="btn btn-outline-light" role="button">Log in</a>
     <a href="signup" class="btn btn-outline-light" role="button" > Sign in</a>
     {{/if}}
@@ -20,20 +18,20 @@
 
 </header>
 
-<h1>💀 Do you know what you are putting yourself into ? 💀</h1>
-<h2> Join the Architect community </h2>
+
+<h1 id="main-title">Workplace insights for your self-empowerment</h1>
 <div class="containerSearch">
-    
-<form autocomplete="off" action="/result" method="GET" class="formSearch">
+  
+    <form autocomplete="off" action="/result" method="GET" class="formSearch">
     <label for="company-search"> </label>
     <input class="search-field" type="search" name="q" id="company-search" placeholder="Search a company...">
     <div id="result"></div>
     <button class="search-button">
     <img src="/images/searchPNG.png">
     </button>
-</form>
-
-<p>Or maybe <a href="addcompany" >Add a new company</a> to the list </p>
+    </form>
+    <br>
+    <p>or you can start by <a href="addcompany" id="add-company">adding your Workplace</a> to the list </p>
 </div>
 
 
