@@ -75,7 +75,7 @@ router.post('/review/:id', (req, res, next) => {
 
 router.get('/review/delete/:id', (req, res, next) => {
 	const id = req.params.id
-	console.log(req.params.id)
+	// console.log(req.params.id)
 	const userid  = req.session.passport.user
 	Review.findById(id)
 		.then(idReviewDb => {
@@ -84,14 +84,13 @@ router.get('/review/delete/:id', (req, res, next) => {
 				if(idUserDb.username === idReviewDb.username){
 					Review.findByIdAndDelete(id)	
 					.then(() => {
-						Company.findOne
 						//needs to be fixed the line below
-						res.redirect(`/`)
+						res.redirect('/')
 					})
 				}
 				else{
 					//needs to be fixed the line below
-					res.redirect(`/`, { message: 'you cannot delete a review that its not writted by you' })
+					res.redirect(`/`, { message: 'you cannot delete a review that is not written by you' })
 				}
 			})
 			.catch(err => next(err))
