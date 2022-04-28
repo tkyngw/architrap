@@ -122,7 +122,7 @@ padding: 20px;
 
 #main-title{
   font-size: 2em;
-  margin-top: 80px;
+  margin-top: 170px;
   text-align: center;
 }
 
@@ -130,17 +130,23 @@ padding: 20px;
   text-align: center;
   margin-top: 25px;
   color: white;
+  text-shadow: 2px 1px 3px rgb(8, 8, 8);
 }
 
 .containerSearch {
-  margin: 200px auto;
-  width: 500px;
+  margin: 300px auto;
+  width: 700px;
   height: 60px
+}
+
+.containerSearch > p {
+  font-size: 1.2em;
 }
 
 .formSearch {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .search-field {
@@ -164,8 +170,13 @@ padding: 20px;
   object-fit: cover;
 }
 
-.links {
-color: white;
+.links{
+  text-decoration: none;
+  color: white
+}
+
+.links:hover {
+color: #fcba03
 }
 
 
@@ -320,7 +331,6 @@ h5 {
   margin-top: 100px;
   margin-bottom: 100px;
   width: 40vw;
-
   border-radius: 15px;
   text-align: left;
   color: #ead9fa;
@@ -333,7 +343,7 @@ h5 {
   border-radius: 2px;
   margin-bottom: 14px;
   background-color: #000032;
-  height: 40px;
+  height: 3em;
   width: 95%;
   margin-left: 0;
   font-size: 0.8em;
@@ -366,6 +376,7 @@ h5 {
   width: 95%;
   margin-top: 20px;
   font-size: 1em;
+  font-weight: bold;
   color: #ead9fa;
   background-color: #aa4fe8;
   padding: auto
@@ -384,7 +395,7 @@ h5 {
 
 .label-field{
   font-size: 0.7em;
-  margin-top: 20px;
+  margin-top: 14px;
   margin-bottom: 7px;
 }
 

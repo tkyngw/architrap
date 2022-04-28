@@ -82,7 +82,7 @@ router.post('/review/:id', (req, res, next) => {
 
 router.get('/review/delete/:id', (req, res, next) => {
 	const id = req.params.id
-	console.log(req.params.id)
+	// console.log(req.params.id)
 	const userid  = req.session.passport.user
 	Review.findById(id)
 		.then(idReviewDb => {
