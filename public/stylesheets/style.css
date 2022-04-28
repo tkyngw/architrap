@@ -1,7 +1,6 @@
 
 
 body {
-
 margin: 0;
 padding: 0;
 display: flex;
@@ -13,7 +12,6 @@ background-size: cover;
 color: rgb(255, 255, 255);
 background-repeat: no-repeat; 
 text-align: center;
-
 }
 
 /*nav bar*/
@@ -67,7 +65,6 @@ position: absolute; top :80px;
   }
 
 
-
 footer {
 margin-top: auto;
 justify-content: space-between; 
@@ -80,7 +77,6 @@ color: white;
 width: 100%;
 }
 
-
 .logsign {
 margin-top: 80px;
 display: flex;
@@ -92,7 +88,6 @@ height: 360px;
 width: 400px;
 border: radius 12px;
 }
-
 
 .btn btn-warning {
   font-family: 'Poppins', sans-serif;
@@ -120,6 +115,7 @@ border: radius 12px;
   display: flex;
   flex-direction: row;
 }
+
 .search-field {
   width: 100%;
   padding: 10px 35px 10px 15px;
@@ -144,9 +140,9 @@ border: radius 12px;
 .formReview{
   margin: 40px 80px;
 }
+
 .card2{
   /* Add shadows to create the "card" effect */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -155,9 +151,11 @@ border: radius 12px;
   margin-top: 40px;
 }
 /* Add some padding inside the card container */
+
 .container2 {
   background-color: #2F4F4F ;
   padding: 2px 16px;
+}
 
 .card {
   display: flex;
