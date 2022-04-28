@@ -1,7 +1,6 @@
 
 
 body {
-
 margin: 0;
 padding: 0;
 display: flex;
@@ -161,7 +160,6 @@ padding: 20px;
   background-color: #2F4F4F ;
   padding: 2px 16px;
   border-radius: 18px; 
-  padding: 10px;
 }
 
 .card {
@@ -218,7 +216,6 @@ padding: 20px;
   color: #ead9fa;
 }
 
-
 /* the "about" view*/
 .aboutimg {
 margin: 0;
@@ -270,3 +267,73 @@ h5 {
   }
 
   /* End of the "about" view*/
+
+
+#add-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 100px;
+  width: 50vw;
+  height: 90vh;
+  border-radius: 15px;
+  text-align: left;
+  color: #ead9fa;
+  font-size: 1.2em;
+}
+
+#add-container input, #size{
+  border: none;
+  border-bottom: 1px solid #ead9fa;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  background-color: #000032;
+  height: 40px;
+  width: 95%;
+  margin-left: 0;
+  font-size: 0.8em;
+  color: #ead9fa;
+  padding-left: 10px;
+}
+
+#phase, #types{
+  border: none;
+  border-bottom: 1px solid #ead9fa;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  background-color: #000032;
+  height: 50px;
+  width: 95%;
+  margin-left: 0;
+  font-size: 0.8em;
+  color: #ead9fa;
+  padding-left: 10px;
+}
+
+::placeholder{
+  color: #ead9fa;
+}
+
+#add-container button {
+  border: 1px solid #000032;
+  border-radius: 2px;
+  height: 40px;
+  width: 95%;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #ead9fa;
+  background-color: #aa4fe8;
+}
+
+#phase {
+  height: 60px;
+}
+
+.label-field{
+  font-size: 0.7em;
+  margin-top: 20px;
+  margin-bottom: 7px;
+}
+
