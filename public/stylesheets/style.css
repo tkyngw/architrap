@@ -146,7 +146,7 @@ padding: 20px;
   object-fit: cover;
 }
 
-#add-company {
+.links {
 color: white;
 }
 
@@ -351,3 +351,9 @@ h5 {
   margin-bottom: 7px;
 }
 
+#review-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+}
