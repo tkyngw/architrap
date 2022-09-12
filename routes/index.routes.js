@@ -42,15 +42,6 @@ router.get('/result', (req, res, next) => {
   })
 })
 
-router.get('/result', (req, res, netx) => {
-  Company.find({ })
-  .then(result =>{
-    res.json(result)
-  })
-  .catch(err => {
-    next(err)
-  })
-})
 
 
 module.exports = router;
